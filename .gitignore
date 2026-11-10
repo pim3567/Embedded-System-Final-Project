@@ -1,0 +1,41 @@
+# Local secrets (keep placeholder examples)
+.env
+.env.*
+!.env.example
+!.env.*.example
+secrets.h
+secrets.local.h
+
+# IDE/workspace state and local history
+.metadata/
+.history/
+*.launch
+
+# Firmware build output
+Debug/
+Release/
+.pio/
+*.elf
+*.hex
+*.bin
+*.o
+*.d
+*.map
+
+# Web/backend generated files
+node_modules/
+dist/
+coverage/
+*.log
+
+# Local database files (commit migrations instead)
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Operating system files
+.DS_Store
+Thumbs.db
