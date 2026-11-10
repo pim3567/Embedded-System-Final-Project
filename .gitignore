@@ -24,6 +24,9 @@ Release/
 
 # Web/backend generated files
 node_modules/
+.next/
+out/
+*.tsbuildinfo
 dist/
 coverage/
 *.log

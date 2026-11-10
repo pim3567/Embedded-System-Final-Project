@@ -2,7 +2,17 @@
 
 An IoT system that uses an STM32 to read a button and joystick, control an RGB LED, and communicate with a NodeMCU connected to NETPIE Cloud. A website displays device data and supports a simple game.
 
-This document describes a **proposed architecture for a team of three**. The repository currently contains a starter folder structure, with no runnable firmware or application. The game rules have not been finalized.
+This document describes a **proposed architecture for a team of three**. A playable browser-only Next.js prototype is available in `frontend/`; firmware and backend implementation have not started. Game rules are being playtested.
+
+## Try the Frontend Prototype
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000). Move with arrow keys and press Space to choose a square whose **text color** matches the simulated LED signal. Ignore the word itself. See the [frontend guide](frontend/README.md) for controls, setup, and checks.
 
 ## 1. Scope and Hardware
 
@@ -46,7 +56,7 @@ STM32 → NodeMCU → NETPIE Device Shadow → Web frontend
 | --- | --- | --- | --- |
 | Member 1 | `firmware/stm32/` and wiring | STM32CubeIDE / CubeMX, C, HAL | Input readings, LED control, button debouncing, UART communication, and timing on the device |
 | Member 2 | `firmware/nodemcu/` and NETPIE connectivity | Arduino IDE or PlatformIO, C/C++ | Wi-Fi/MQTT connectivity, UART ↔ MQTT message handling, Shadow updates, and reconnection |
-| Member 3 (you) | `frontend/`, `backend/`, and data storage | React + Vite and Node.js + Express are suggested; choose a database when backend development starts | Web game, live device status, game-session APIs, score validation, and leaderboard |
+| Member 3 (you) | `frontend/`, `backend/`, and data storage | Next.js + React for the frontend; Node.js + Express is suggested for the backend; choose a database when backend development starts | Web game, live device status, game-session APIs, score validation, and leaderboard |
 
 ## 4. Folder Structure
 
