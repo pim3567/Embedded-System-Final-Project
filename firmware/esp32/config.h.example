@@ -1,0 +1,15 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+// Wi-Fi Configuration
+#define WIFI_SSID "YOUR_WIFI_NAME"
+#define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
+
+// NETPIE Credentials
+#define MQTT_SERVER "broker.netpie.io"
+#define MQTT_PORT 1883
+#define MQTT_CLIENT_ID "NETPIE_CLIENT_ID"
+#define MQTT_TOKEN "NETPIE_TOKEN"
+#define MQTT_SECRET "NETPIE_SECRET"
+
+#endif

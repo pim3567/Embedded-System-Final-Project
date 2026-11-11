@@ -22,6 +22,9 @@ Release/
 *.d
 *.map
 
+# NodeMCU
+*config.h
+
 # Web/backend generated files
 node_modules/
 dist/
